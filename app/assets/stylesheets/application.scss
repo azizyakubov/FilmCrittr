@@ -1,0 +1,6 @@
+/*
+require tree and require self was deleted and instead uses @import below during sass configuration
+ */
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
