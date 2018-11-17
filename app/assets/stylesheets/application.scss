@@ -4,3 +4,68 @@ require tree and require self was deleted and instead uses @import below during 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// Typography Styles
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+//Background gradient. Credit to https://twitter.com/_ighosh from uiGradients.com/#flare
+.navbar, .home-callout {
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(left, #f5af19, #f12711);
+  background: -o-linear-gradient(left, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+// Nav Styles
+.navbar {
+  border: none;
+}
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  &:hover {
+    color: white;
+    opacity: 0.75;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #00c6ff;
+  }
+}
+
+// Home Page Styles
+.home-callout {
+  color: white;
+  margin-top: -20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.home-signup-links {
+  margin-top: 30px;
+}
+
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-top: -14px;
+}
