@@ -11,15 +11,13 @@
 
   <tbody>
     <% @movies.each do |movie| %>
-      <tr>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-md-3">
+        <%= link_to movie_path(:id => movie.id) do %>
+    			<%= movie.title %>
+  		  <% end %>
+      </div>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Movie', new_movie_path %>

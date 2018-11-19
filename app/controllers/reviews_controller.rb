@@ -5,6 +5,8 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   def index
     @reviews = Review.all
+    @movies = Tmdb::Movie.popular
+    @movies = @movies.results
   end
 
   # GET /reviews/1
@@ -15,6 +17,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @movie = Tmdb::Movie.detail(params[:movie_id])
   end
 
   # GET /reviews/1/edit
@@ -67,8 +70,8 @@ class ReviewsController < ApplicationController
       @review = Review.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # whitelist review params
     def review_params
-      params.fetch(:review, {})
+      params.require(:review).permit(:rating, :comment, :created_at, :user_id, :movie_id)
     end
 end

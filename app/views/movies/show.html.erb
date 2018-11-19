@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+	<div class="col-md-2">
+		<img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/<%= @movie.poster_path %>">
+	</div>
+	<div class="col-xl-10 movie-description-container">
+		<%= %>
+	</div>
+</div>
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
