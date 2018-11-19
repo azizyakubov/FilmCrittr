@@ -41,6 +41,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 #Jquery required for bootstrap JavaScript
 gem 'jquery-rails'
 
+# Use themoviedb-api library by 18months for API calls to the themoviedb.org
+gem 'themoviedb-api'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
