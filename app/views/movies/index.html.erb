@@ -1,23 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Movies</h1>
+<h1>Popular Movies</h1>
+  <div class="container">
+    <div class="row">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @movies.each do |movie| %>
-      <div class="col-md-3">
-        <%= link_to movie_path(:id => movie.id) do %>
-    			<%= movie.title %>
-  		  <% end %>
-      </div>
-    <% end %>
-  </tbody>
-</table>
-
+      <% @movies.each do |movie| %>
+        <div class="col-12 col-md-4">
+          <%= link_to movie_path(:id => movie.id) do %>
+            <div class="movie-img">
+              <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/<%= movie.poster_path %>">
+              <br>
+              <p class=""><%= movie.title %></p>
+            </div>
+    		  <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <br>
