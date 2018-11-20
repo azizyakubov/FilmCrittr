@@ -17,5 +17,8 @@
   </div>
   <br>
   <%= link_to 'Back', movies_path, class: "float-right" %>
-  <%= link_to 'Write a Review', new_review_path(:movie_id => @movie.id), class: "btn btn-primary float-right" %>
+  <!-- <%= link_to 'Write a Review', new_review_path(:movie_id => @movie.id), class: "btn btn-primary float-right" %> -->
+</div>
+<div>
+  <%= render 'reviews/form'  %>
 </div>
