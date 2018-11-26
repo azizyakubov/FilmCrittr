@@ -1,13 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Recent Reviews</h1>
 
-<% @reviews.each do |review|  %>
-  <h1><%= review.title  %></h1>
-  <p><%= review.comment  %></p>
-  <p><%= review.rating  %></p>
-  <p><%= review.user_email  %></p>
-  <p>Posted on: <%= review.created_at  %></p>
-<% end %>
+<div class="container">
+  <h1 class="text-center">Recent Reviews</h1>
+  <div class="container">
+    <div class="row">
+      <% @reviews.each do |review|  %>
+        <div class="col-lg-6 review-box">
+          <h4 class="left"><%= review.title  %></h1>
+          <div class="right">
+            <% review.rating.times do  %>
+            <i class="fa fa-paw"></i>
+          <% end %>
+          </div>
+          <br>
+          <hr>
+          <p class="italic">"<%= review.comment  %>"</p>
+          <div>
+            <p class="left">Posted on: <%= review.created_at.strftime("%m/%d/%Y at %I:%M%p")  %></p>
+            <p class="right">by <%= review.user_email  %></p>
+          </div>
+        </div>
+      <% end %>
 
-<br>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ require tree and require self was deleted and instead uses @import below during 
 @import "font-awesome-sprockets";
 
 // Typography Styles
-h1, h2, h3 {
+h1, h2, h3, h4, p {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -70,4 +70,26 @@ h1, h2, h3 {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   margin-top: -14px;
+}
+
+// Review box styling
+.review-box {
+  background: #fafafa;
+	padding: 10px 5px;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+
+.right {
+  display: inline-block;
+  float: right;
+}
+
+.left {
+  display: inline-block;
+  float: left;
+}
+
+.italic {
+  font-style: italic;
 }

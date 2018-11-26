@@ -47,7 +47,7 @@ gem 'themoviedb-api'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 
 # Font awesome gem for icons and logos
-gem "font-awesome-rails"
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'font-awesome-sass', '4.6.2'
 
 group :development, :test do
