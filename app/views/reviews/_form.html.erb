@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <% if user_signed_in? %>
     <h3 class="text-center">Leave a review</h3>
     <div class="col-md-4 col-md-offset-4">
 
@@ -23,5 +24,10 @@
         <% end %>
       </div>
     </div>
+    <% else %>
+      <h3 class="text-center"><%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %> or <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %> to leave a comment
+
+      </h3>
+    <% end %>
   </div>
 </div>

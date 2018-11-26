@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-
+<br>
 <div class="container">
   <h1 class="text-center">Recent Reviews</h1>
   <div class="container">
     <div class="row">
       <% @reviews.each do |review|  %>
         <div class="col-lg-6 review-box">
-          <h4 class="left"><%= review.title  %></h1>
+          <h4 class="left"><%= review.title  %></h4>
           <div class="right">
             <% review.rating.times do  %>
             <i class="fa fa-paw"></i>
