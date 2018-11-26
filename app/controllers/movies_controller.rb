@@ -13,9 +13,15 @@ class MoviesController < ApplicationController
   # GET /movies/1.json
   def show
     @movie = Tmdb::Movie.detail(params[:id])
-    @reviews = Review.all
-  end
+    @all_reviews = Review.all
+    @this_movie_reviews = []
 
+    @all_reviews.each do |review|
+      if review.title == @movie.title
+        @this_movie_reviews << review
+      end
+    end
+  end
   # GET /movies/new
   def new
     @movie = Movie.new

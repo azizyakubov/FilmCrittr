@@ -1,21 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Popular Movies</h1>
-  <div class="container">
-    <div class="row">
-
-
-      <% @movies.each do |movie| %>
-        <div class="col-12 col-md-4">
-          <%= link_to movie_path(:id => movie.id) do %>
-            <div class="movie-img">
-              <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/<%= movie.poster_path %>">
-              <br>
-              <p class=""><%= movie.title %></p>
-            </div>
-    		  <% end %>
-        </div>
-      <% end %>
-    </div>
+<div class="home-callout text-center container-fluid">
+  <h1>Welcome to FilmCrittr</h1>
+  <h3>A home for every Critter and their crituque </h3>
+</div>
+<br>
+<div class="container">
+  <h1 class="text-center">Popular Movies</h1>
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-12 col-md-4">
+        <%= link_to movie_path(:id => movie.id) do %>
+          <div class="movie-img">
+            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/<%= movie.poster_path %>">
+            <br>
+            <p class=""><%= movie.title %></p>
+          </div>
+  		  <% end %>
+      </div>
+    <% end %>
   </div>
+</div>
 <br>

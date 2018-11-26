@@ -19,6 +19,28 @@
   <%= link_to 'Back', movies_path, class: "float-right" %>
   <!-- <%= link_to 'Write a Review', new_review_path(:movie_id => @movie.id), class: "btn btn-primary float-right" %> -->
 </div>
+<div class="container">
+  <div class="row">
+    <% @this_movie_reviews.each do |review|  %>
+      <div class="col-lg-6 review-box">
+        <h4 class="left"><%= review.title  %></h1>
+        <div class="right">
+          <% review.rating.times do  %>
+          <i class="fa fa-paw"></i>
+        <% end %>
+        </div>
+        <br>
+        <hr>
+        <p class="italic">"<%= review.comment  %>"</p>
+        <div>
+          <p class="left">Posted on: <%= review.created_at.strftime("%m/%d/%Y at %I:%M%p")  %></p>
+          <p class="right">by <%= review.user_email  %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
 <div>
   <%= render 'reviews/form'  %>
 </div>
