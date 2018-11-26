@@ -1,5 +1,7 @@
 TCI Code Challenge
 =========
+This project is deployed on [Heroku](https://filmcrittr.herokuapp.com/)
+=========
 
 In this project, you will create a movie review site from scratch using Rails.
 
