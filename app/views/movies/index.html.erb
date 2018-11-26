@@ -6,6 +6,14 @@
 </div>
 <br>
 <div class="container">
+  <p>Sort by:
+    <%= link_to "Title", movies_path(:sort_by => "title"), class: "btn btn-outline-warning" %>
+    <%= link_to "Release Date", movies_path(:sort_by => "release_date"), class: "btn btn-outline-warning" %>
+    <%= link_to "Genre", movies_path(:sort_by => "genre"), class: "btn btn-outline-warning" %>
+  </p>
+</div>
+<br>
+<div class="container">
   <h1 class="text-center">Popular Movies</h1>
   <div class="row">
     <% @movies.each do |movie| %>

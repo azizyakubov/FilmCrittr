@@ -7,6 +7,15 @@ class MoviesController < ApplicationController
 
     @movies = Tmdb::Movie.popular
     @movies = @movies.results
+
+    if params[:sort_by] == "title"
+			@movies = @movies.sort_by &:title
+		elsif params[:sort_by] == "release_date"
+			@movies = @movies.sort_by &:release_date
+		elsif params[:sort_by] == "genre"
+			@movies = @movies.sort_by &:genre
+		end
+
   end
 
   # GET /movies/1
